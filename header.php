@@ -128,10 +128,6 @@
 });
 });
     
-    $(document).ready(function(){  $(".isteps").inViewport(function(px){
-    if(px) $(this).addClass("animated rubberBand") ;
-});
-});
     
     $(document).ready(function(){  $("h2").inViewport(function(px){
     if(px) $(this).addClass("animated slideInLeft") ;
