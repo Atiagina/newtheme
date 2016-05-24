@@ -651,7 +651,7 @@ foreach( $gallery as $image ) {
 				the_content();
 				echo '</div>';
                 echo '<div class="col-xs-12 col-sm-4">';
-                echo '<div class="multilogo"> ';
+                echo '<div class=""> ';
                 
 $gallery = get_children( 'posts_per_page=5&post_type=attachment&post_mime_type=image&post_parent=' . $post->ID );
 $attr = array(

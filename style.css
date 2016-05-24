@@ -428,6 +428,7 @@ nav.navbar-default .navbar-nav > .active > a:focus
     color: black;
     font-family: Comfortaa; !important
     font-size: 5em; !important
+    letter-spacing: 1em; !important
 }
 
 .project-overlay > div > div > .storebtn,
@@ -633,7 +634,8 @@ border: none;
     border-top-right-radius: 20px;
 }
 
-.mainmeta {
+.mainmeta,
+.multilogo {
     border-right: 1px solid gray;
 }
 
@@ -1146,7 +1148,8 @@ div.owl-next {
     font-size: 6em;
 }
     
-    .mainmeta {
+    .mainmeta,
+    .multilogo {
     border-right: none;
 }
     
