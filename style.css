@@ -634,10 +634,11 @@ border: none;
     border-top-right-radius: 20px;
 }
 
-.mainmeta,
-.multilogo {
+.mainmeta
+ {
     border-right: 1px solid gray;
 }
+
 
 #ulmetas {
     margin-bottom: 20px;
@@ -1148,8 +1149,7 @@ div.owl-next {
     font-size: 6em;
 }
     
-    .mainmeta,
-    .multilogo {
+    .mainmeta {
     border-right: none;
 }
     
