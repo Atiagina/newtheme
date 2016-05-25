@@ -431,6 +431,12 @@ nav.navbar-default .navbar-nav > .active > a:focus
     letter-spacing: 1em; !important
 }
 
+#section1 .project-overlay-4 h1.ahorra small,
+#section1 .customvisible h1.ahorra small {
+    color: black;
+    text-transform: none;
+}
+
 .project-overlay > div > div > .storebtn,
 .storefooter > div > div > .storebtn {
     background: black;
