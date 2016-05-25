@@ -1153,6 +1153,11 @@ div.owl-next {
     border-right: none;
 }
     
+    .multilogo {
+    border-left: none;
+}
+    
+    
     .navbar-collapse .collapse {
         display: inline; !important
         width: 100%;
