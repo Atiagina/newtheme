@@ -124,3 +124,34 @@ $addsizes = array(
 $newsizes = array_merge($sizes, $addsizes);
 return $newsizes;
 }
+
+add_action( 'wpcf7_enqueue_scripts', 'custom_recaptcha_enqueue_scripts', 11 );
+
+function custom_recaptcha_enqueue_scripts() {
+	wp_deregister_script( 'google-recaptcha' );
+
+	$url = 'https://www.google.com/recaptcha/api.js';
+	$url = add_query_arg( array(
+		'onload' => 'recaptchaCallback',
+		'render' => 'explicit',
+	 	'hl' => 'es' ), $url );
+
+	wp_register_script( 'google-recaptcha', $url, array(), '2.0', true );
+}
+
+function _save_attachment_url($post, $attachment) {
+    if ( isset($attachment['url']) ) 
+        update_post_meta( $post['ID'], '_wp_attachment_url', esc_url_raw($attachment['url']) ); 
+    return $post;
+}
+add_filter('attachment_fields_to_save', '_save_attachment_url', 10, 2);
+
+function _replace_attachment_url($form_fields, $post) {
+    if ( isset($form_fields['url']['html']) ) {
+        $url = get_post_meta( $post->ID, '_wp_attachment_url', true );
+        if ( ! empty($url) )
+            $form_fields['url']['html'] = preg_replace( "/value='.*?'/", "value='$url'", $form_fields['url']['html'] );
+    }
+    return $form_fields;
+}
+add_filter('attachment_fields_to_edit', '_replace_attachment_url', 10, 2);
