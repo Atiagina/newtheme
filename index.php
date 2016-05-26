@@ -963,7 +963,7 @@ foreach( $gallery as $image ) {
                 echo '<a href="" target="_blank"><p><i class="fa fa-spotify" aria-hidden="true"></i> Spotify</p></a>';
                 echo '</div>';
                 echo '<div class="socialbutton">';
-                echo '<a href="" target="_blank"><p><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</p></a>';
+                echo '<a href="https://www.linkedin.com/company/zave-app" target="_blank"><p><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</p></a>';
                 echo '</div>';
                 echo '</div>';
                 echo '<div class="col-xs-12 col-sm-6">';
