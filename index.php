@@ -874,7 +874,7 @@ foreach( $gallery as $image ) {
 				echo '</div>';
                 echo '<div class="col-xs-12 col-sm-6 multilogo">';
                 
-$gallery = get_children( 'posts_per_page=5&post_type=attachment&post_mime_type=image&post_parent=' . $post->ID );
+$gallery = get_children( 'post_type=attachment&post_mime_type=image&post_parent=' . $post->ID );
 $attr = array(
     'class' => "attachment-size wp-post-image",
 );
